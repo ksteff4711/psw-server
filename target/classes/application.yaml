@@ -1,0 +1,21 @@
+spring:
+  main:
+    banner-mode: log
+  datasource:
+    url: jdbc::h2:mem:testdb;MODE=MYSQL
+  config:
+    activate:
+      on-profile: local_dev
+---
+spring:
+  datasource:
+    url: jdbc::mysql://192.168.2.44/passdb
+    username: passuser
+    data-password: )(passDBuser11p**__
+  config:
+    activate:
+      on-profile: prod
+logging:
+  level:
+    org.kingsteff: DEBUG
+    root: INFO
