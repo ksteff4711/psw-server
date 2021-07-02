@@ -3,7 +3,8 @@ package org.kingsteff.personal.entity;
 import javax.persistence.*;
 import java.util.*;
 
-@Entity
+@Entity()
+@Table(name="ppsuser")
 public class User {
 
     @Id
@@ -14,6 +15,7 @@ public class User {
     private String email;
     private String name;
     private String password;
+    @Column(name="loginfailedcount")
     private Integer loginFailedCount;
     private boolean active;
 
