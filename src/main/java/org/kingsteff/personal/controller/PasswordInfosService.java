@@ -31,7 +31,6 @@ public class PasswordInfosService {
 
     @PostConstruct
     public void initService(){
-        System.out.println("PATH--->>"+System.getProperties().get("java.class.path"));
     }
 
 }
