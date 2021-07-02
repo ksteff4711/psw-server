@@ -8,7 +8,7 @@ public class PasswordApplication {
 
     public static void main(String args[]){
 
-        System.out.println("PATH--->>"+System.getProperties().get("java.class.path"));
+        System.out.println("Class Path -->>"+System.getProperties().get("java.class.path"));
         SpringApplication.run(PasswordApplication.class,args);
     }
 }
