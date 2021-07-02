@@ -6,7 +6,7 @@ public class UserBuilder {
 
     public static UserDTO getUserDTOFromUser(User incoming){
         UserDTO result = new UserDTO();
-        result.setLogin(incoming.getLogin());
+        result.setUsername(incoming.getUsername());
         result.setPassword(incoming.getPassword());
         return result;
     }

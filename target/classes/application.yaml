@@ -1,20 +1,15 @@
 spring:
-  main:
-    banner-mode: log
   datasource:
-    url: jdbc::h2:mem:testdb;MODE=MYSQL
-  config:
-    activate:
-      on-profile: local_dev
----
-spring:
-  datasource:
-    url: jdbc::mysql://192.168.2.44/passdb
-    username: passuser
-    data-password: )(passDBuser11p**__
-  config:
-    activate:
-      on-profile: prod
+    url: jdbc:h2:file:./database/datafile;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    data-password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
 logging:
   level:
     org.kingsteff: DEBUG
